@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from password_checker import check_password_strength
-from auth import register_user
+from auth import register_user, login_user
 from database import create_database
 
 # FastAPI app
@@ -31,6 +31,13 @@ def analyze_password(request: PasswordRequest):
 @app.post("/register")
 def register(request: UserRequest):
     return register_user(
+        request.email,
+        request.password
+    )
+
+@app.post("/login")
+def login(request: UserRequest):
+    return login_user(
         request.email,
         request.password
     )

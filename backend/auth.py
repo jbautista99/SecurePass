@@ -33,3 +33,36 @@ def register_user(email, password):
 
     finally:
         conn.close()
+
+
+def login_user(email, password):
+    conn = sqlite3.connect("securepass.db")
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT password_hash FROM users WHERE email = ?",
+        (email,)
+    )
+
+    user = cursor.fetchone()
+
+    conn.close()
+
+    if not user:
+        return {
+            "error": "User Not Found."
+        }
+
+    stored_hash = user[0]
+
+    if bcrypt.checkpw(
+        password.encode("utf-8"),
+        stored_hash.encode("utf-8")
+    ):
+        return {
+            "message": "Login successful."
+        }
+
+    return {
+        "error": "Invalid password."
+    }
