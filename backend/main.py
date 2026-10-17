@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from password_checker import check_password_strength
 from auth import register_user, login_user
 from database import create_database
+from geofencing import check_location
 
 # FastAPI app
 app = FastAPI()
@@ -18,6 +19,10 @@ class PasswordRequest(BaseModel):
 class UserRequest(BaseModel):
     email: str
     password: str
+
+
+class LocationRequest(BaseModel):
+    location: str
 
 # Routes
 @app.get("/")
@@ -40,4 +45,10 @@ def login(request: UserRequest):
     return login_user(
         request.email,
         request.password
+    )
+
+@app.post("/check-location")
+def check_location_route(request: LocationRequest):
+    return check_location(
+        request.location
     )
