@@ -3,11 +3,17 @@ Functional Requirements:
 - User Registration
 - User Login
 - Password Strength Analysis
+- Common Password Detection
+- Geofencing Location Validation
+- Geofencing Region Simulation
+- Login Location Monitoring
+
+Future Functional Requirements:
+
+- Geofencing Integration With Authentication
+- Security Alerts For Unauthorized Locations
+- Login History Tracking
 - Password Breach Detection
-- Multi-Factor Authentication (MFA)
-- Login Monitoring
-- Security Alerts
-- Security Dashboard
 
 Non-Functional Requirements:
 
