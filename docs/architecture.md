@@ -1,11 +1,8 @@
 System Architecture:
 
 - User
-
 - Reactor Frontend
-
 - FastAPI Backend
-
 - PostgreSQL Database
 
 Backend Modules:
