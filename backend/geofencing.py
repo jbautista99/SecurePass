@@ -1,18 +1,34 @@
 # geofencing.py
 
-APPROVED_LOCATIONS = [
-    "California"
+SOUTHWEST_REGION = [
+    "Arizona",
+    "California",
+    "Colorado",
+    "Nevada",
+    "New Mexico",
+    "Utah"
 ]
 
-
 def check_location(location):
-    if location in APPROVED_LOCATIONS:
+
+    location = location.strip()
+
+    if location in SOUTHWEST_REGION:
         return {
-            "status": "approved",
-            "message": "Login location approved."
+            "inside_geofence": True,
+            "zone": "Southwest Region",
+            "message": "Location is inside the approved geofence."
+        }
+
+    if location.isalpha():
+        return {
+            "inside_geofence": False,
+            "zone": "Outside Region",
+            "message": "Location is outside the approved geofence."
         }
 
     return {
-        "status": "flagged",
-        "message": "Unrecognized login location detected."
+        "inside_geofence": False,
+        "zone": "Invalid Location",
+        "message": "Invalid location entered. Please provide a valid location."
     }
