@@ -5,6 +5,7 @@ from password_checker import check_password_strength
 from auth import register_user, login_user
 from database import create_database
 from geofencing import check_location
+from login_history import get_login_history
 
 # FastAPI app
 app = FastAPI()
@@ -52,3 +53,7 @@ def check_location_route(request: LocationRequest):
     return check_location(
         request.location
     )
+
+@app.get("/login-history")
+def login_history():
+    return get_login_history()
