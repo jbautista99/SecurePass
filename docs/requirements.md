@@ -7,13 +7,18 @@ Functional Requirements:
 - Geofencing Location Validation
 - Geofencing Region Simulation
 - Login Location Monitoring
+- Regional Geofence Simulation
+- Location Validation
+- Security Alert Generation
+- Risk Assessment For Login Locations
+- Login Activity Logging
 
 Future Functional Requirements:
 
-- Geofencing Integration With Authentication
-- Security Alerts For Unauthorized Locations
-- Login History Tracking
-- Password Breach Detection
+- Geofencing Integration With User Authentication
+- Security Alert History Tracking
+- Multi-Region Geofence Management
+- Location-Based Access Control
 
 Non-Functional Requirements:
 
