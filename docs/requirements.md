@@ -12,6 +12,9 @@ Functional Requirements:
 - Security Alert Generation
 - Risk Assessment For Login Locations
 - Login Activity Logging
+- Geofencing-Integrated Authentication
+- Security Alert Generation
+- Security Alert History Tracking
 
 Future Functional Requirements:
 

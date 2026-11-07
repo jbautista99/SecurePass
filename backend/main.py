@@ -6,6 +6,7 @@ from auth import register_user, login_user
 from database import create_database
 from geofencing import check_location
 from login_history import get_login_history
+from security_alerts import get_alert_history
 
 # FastAPI app
 app = FastAPI()
@@ -20,6 +21,7 @@ class PasswordRequest(BaseModel):
 class UserRequest(BaseModel):
     email: str
     password: str
+    location: str
 
 
 class LocationRequest(BaseModel):
@@ -43,10 +45,20 @@ def register(request: UserRequest):
 
 @app.post("/login")
 def login(request: UserRequest):
-    return login_user(
+
+    login_result = login_user(
         request.email,
         request.password
     )
+
+    geofence_result = check_location(
+        request.location
+    )
+
+    return {
+        "authentication": login_result,
+        "geofencing": geofence_result
+    }
 
 @app.post("/check-location")
 def check_location_route(request: LocationRequest):
@@ -57,3 +69,7 @@ def check_location_route(request: LocationRequest):
 @app.get("/login-history")
 def login_history():
     return get_login_history()
+
+@app.get("/security-alerts")
+def security_alerts():
+    return get_alert_history()

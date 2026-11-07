@@ -1,6 +1,7 @@
 # geofencing.py
 
 from login_history import add_login_attempt
+from security_alerts import add_alert
 
 SOUTHWEST_REGION = [
     "Arizona",
@@ -36,6 +37,12 @@ def check_location(location):
             "Outside Geofence"
         )
 
+        add_alert(
+            location,
+            "Medium",
+            "Location is outside the approved geofence."
+        )
+
         return {
             "inside_geofence": False,
             "zone": "Outside Region",
@@ -47,6 +54,12 @@ def check_location(location):
     add_login_attempt(
         location,
         "Invalid Location"
+    )
+
+    add_alert(
+        location,
+        "High",
+        "Access attempt from an invalid location detected."
     )
 
     return {
