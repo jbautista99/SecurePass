@@ -1,0 +1,71 @@
+SecurePass: Intelligent Authentication & Account Security Platform
+Final Report
+My Senior Design Project
+Presented to the Faculty of
+California State University Dominguez Hills
+In Partial Fulfillment of
+the Requirements for the 
+Bachelor’s Degree in Information Technology
+by
+Jeremiah R Pallera-Bautista
+Fall 2026
+
+PROJECT: CONSTRUCTION OF MODERN SOLUTIONS FOR ACCOUNT SECURITY, INTELLIGENT AUTHENTICATION, GEOFENCING-BASED ACCESS CONTROL, & SECURITY MONITORING. SECUREPASS: INTELLIGENT AUTHENTICATION & ACCOUNT SECURITY PLATFORM
+AUTHOR: JEREMIAH R PALLERA-BAUTISTA
+
+ACKNOWLEDGEMENTS
+I would like to acknowledge California State University Dominguez Hills (CSUDH), Professor Alireza Izaddoost, CSUDH Information Technology (IT), the CSUDH Toro Learning and Testing Center (TLTC), and the CSUDH Computer Science Department for their invaluable contributions in helping me earn my Bachelor of Science in Information Technology Degree. The expertise, guidance, professionalism, and support provided by these commendable individuals and nurturing communities played a crucial role in my academic journey. It is only necessary that I recognize and appreciate their efforts. Not only did these people help me develop as a university student, but also as a person, an independent thinker, and life-long learner. With the completion of this project, and the support of the CSUDH community. I look forward to bettering myself.
+
+TABLE OF CONTENTS
+
+FIGURES
+
+ABSTRACT
+
+I.	INTRODUCTION
+    1.1 Project Overview
+    1.2 Project Objectives
+    1.3	Problem Statement
+    1.4	Scope Of The Project
+    1.5	Significance Of The Study
+
+II.	BACKGROUND / LITERATURE REVIEW
+    2.1 Password Security
+    2.2 Authentication Systems
+    2.3 Geofencing Technology
+    2.4 Security Monitoring Systems
+    2.5 Password Hashing With bcrypt
+    2.6 Risk-Based Authentication
+
+III. METHODOLOGY
+     3.1 Development Methodology
+     3.2 Tools & Technologies
+     3.3 Testing Approach
+
+IV.	MODEL / SYSTEM IMPLEMENTATION
+    4.1 User Registration System
+    4.2 User Login System
+    4.3 Password Hashing (bcrypt)
+    4.4 Password Strength Analysis
+    4.5 Regional Geofence Simulation
+    4.6 Risk Assessment
+    4.7 Security Alert Generation
+    4.8 Login Activity Logging
+    4.9 Security Alert History
+
+V.	RESULTS / EVALUATION
+    5.1 Authentication Testing
+    5.2 Password Analysis Testing
+    5.3 Geofencing Testing
+    5.4 Risk Assessment Testing
+    5.5 Security Alert Testing
+    5.6 Login Monitoring Testing
+
+VI.	CONCLUSION AND FUTURE WORK
+    6.1 Project Summary
+    6.2 Lessons Learned
+    6.3 Future Development
+
+VII.	REFERENCES
+
+VIII.	 GLOSSARY
