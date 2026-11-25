@@ -207,7 +207,7 @@ Completed:
 - Security Alerts
 - Security Alert History
 - Login Activity Logging
-- Geofencing Authentication Integreation
+- Geofencing Authentication Integration
 - FastAPI Backend
 - SQLite Database
 - GitHub Repository

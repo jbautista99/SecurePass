@@ -17,7 +17,7 @@ SecurePass: Intelligent Authentication & Account Security Platform
    4.4 Security Monitoring Systems
 
 5. Methodology
-   5.1 Development Apporoach
+   5.1 Development Approach
    5.2 System Architecture
    5.3 Design Decisions
 
